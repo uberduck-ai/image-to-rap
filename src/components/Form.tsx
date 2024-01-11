@@ -8,7 +8,6 @@ import { Button } from "./Button";
 import Spinner from "./Spinner";
 
 const formStyle = {
-  backgroundColor: "#f5f5f5",
   padding: "20px",
   borderRadius: "8px",
   boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
@@ -77,7 +76,11 @@ export default function Form() {
   };
 
   return (
-    <form style={formStyle} action={formAction}>
+    <form
+      className="bg-gray-300 dark:bg-gray-900"
+      style={formStyle}
+      action={formAction}
+    >
       <div>
         <label htmlFor="subjectImage">Input Image</label>
         <input
@@ -92,7 +95,12 @@ export default function Form() {
       </div>
       <div>
         <label htmlFor="tone">Lyrics Tone</label>
-        <select id="tone" name="tone" style={inputStyle}>
+        <select
+          className="dark:bg-gray-900"
+          id="tone"
+          name="tone"
+          style={inputStyle}
+        >
           <option value="happy">Happy</option>
           <option value="sad">Sad</option>
           <option value="angry">Angry</option>
@@ -103,7 +111,7 @@ export default function Form() {
       <div>
         <SubmitButton />
       </div>
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-2 mt-4">
         {state.songUrl && (
           <div>
             <audio controls src={state.songUrl} />

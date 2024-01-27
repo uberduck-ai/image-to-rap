@@ -17,7 +17,8 @@ export default function Home() {
         <a className="underline" href="https://www.uberduck.ai" target="_blank">
           Uberduck
         </a>{" "}
-        for more.
+        for more. Retry if you get errors, as there may be timeouts due to cold
+        starts.
       </div>
       <Form />
 
